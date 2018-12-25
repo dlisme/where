@@ -8,7 +8,8 @@
 
 <script>
 // 如何在Home中是用Header.vue, 如下引入，后面可以省略.vue
-import HomeHeader from './components/Header'
+import HomeHeader from './components/Header';
+
 export default {
     name: 'Home',
     components: {    //声明局部组件才能用

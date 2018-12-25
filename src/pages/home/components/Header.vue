@@ -1,17 +1,42 @@
 <template>
-    <div>
-        this is header
+    <div class="header">
+        <div class="header-left">返回</div>
+        <div class="header-input">输入城市/景点/游玩/主题</div>
+        <div class="header-right">城市</div>
+        <!-- <router-view></router-view> -->
     </div>
 </template>
 
 <script>
 export default {
     name: 'HomeHeader'
-    
 }
+//1rem = html font-size = 50px
+// 86/100
 </script>
 
-<style>
+<style lang="stylus" scoped>
 
+    .header
+        display: flex
+        line-height: .86rem
+        background: #00bcd4
+        color: #fff
+        .header-left
+            width: .86rem
+            float: left
+        .header-input
+            flex: 1
+            height: .64rem
+            line-height: .64rem
+            margin-top: .12rem
+            margin-left: .2rem
+            background: #fff
+            border-radius: .1rem
+            color: #ccc
+        .header-right
+            width: 1.24rem
+            float: right
+            text-align: center
 
 </style>

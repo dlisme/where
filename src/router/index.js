@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)
 import Home from '@/pages/home/Home'
+Vue.use(VueRouter)
+Vue.config.productionTip = false
 
-
-export default new Router({
+export default new VueRouter({
   routes: [
     {
-    path: '/',
-    name: 'Home',
-    component: Home
-  }
-]
+      path: '/',
+      name: 'Home',
+      component: Home
+    }
+  ]
 })

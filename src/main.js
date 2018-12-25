@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import router from 'vue-router'
+import router from './router'
 import fastClick from 'fastclick'
 // 300毫秒点击延迟
 import './assets/styles/reset.css'
@@ -16,9 +16,7 @@ fastClick.attach(document.body)
 new Vue({
   el: "#app",
   router,
-  components: { App },
-  template: '<App/>',
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')
 
 
