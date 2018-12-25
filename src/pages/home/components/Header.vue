@@ -28,7 +28,7 @@ export default {
 // 3、自己创建别名 xxx代表xxx
 
 // 问题一： 我我我找不到此目录webpack.base.conf.js
-// 问题二： 安装了stylus，但是咋用不了？  
+// 问题二： 安装了stylus，但是咋用不了？ （因为字体还是那么大） 
 </script>
 
 <style lang="stylus" scoped>

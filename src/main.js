@@ -1,17 +1,23 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import fastClick from 'fastclick'
 // 300毫秒点击延迟
+import fastClick from 'fastclick'
+// 轮播插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import './assets/styles/reset.css'
-import './assets/styles/border.css'
 // border.css解决1像素边框问题
+import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
+// 轮播插件css
+import 'swiper/dist/css/swiper.css'
 
 
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
+// 在vue中使用这个插件
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 new Vue({
   el: "#app",
