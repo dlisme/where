@@ -6,7 +6,7 @@ import fastClick from 'fastclick'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
 // border.css解决1像素边框问题
-
+import './assets/styles/iconfont.css'
 
 
 
@@ -22,3 +22,4 @@ new Vue({
 
 //路由就是根据网址的不同，返回不同的内容给用户
 // 添加router-view显示的是当前路由地址所对应的内容
+// @代表src目录
