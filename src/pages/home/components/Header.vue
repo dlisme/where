@@ -8,7 +8,7 @@
             输入城市/景点/游玩/主题
         </div>
         <div class="header-right">
-            城市
+            {{this.city}}
             <span class="iconfont arrow-icon">&#xe6aa;</span>
         </div>
         <!-- <router-view></router-view> -->
@@ -17,7 +17,10 @@
 
 <script>
 export default {
-    name: 'HomeHeader'
+    name: 'HomeHeader',
+    props: {
+        city: String
+    }
 }
 //1rem = html font-size = 50px
 // 86/100
