@@ -21,7 +21,12 @@
                 </div>
             </div>
             <!-- cities是一个对象，对象也可以被v-for循环，他的第二项是key,而不是index -->
-            <div class="area" v-for="(item , key) of cities" :key="key">
+            <div 
+                class="area" 
+                v-for="(item , key) of cities" 
+                :key="key"
+                :ref="key"
+            >
                 <div class="title border-topbottom">{{key}}</div>
                 <div class="item-list">
                     <div 
@@ -42,10 +47,21 @@ export default {
     name:'CityList',
     props:{
         hot: Array,
-        cities: Object
+        cities: Object,
+        letter: String
     },
     mounted () {
         this.scroll = new Bscroll(this.$refs.wrapper)
+    },
+    watch: {     //当点到字母的时候，左边对应的首字母显示出来，侦听器
+        letter () {
+            if (this.letter) {
+                const element = this.$refs[this.letter][0]
+                // console.log(element)
+                this.scroll.scrollToElement(element)    //vue提供的方法 自动滚到某一个元素上
+            }
+            // console.log(this.letter)
+        }
     }
 }
 </script>
