@@ -15,6 +15,7 @@ import { clearTimeout } from 'timers'; -->
                     class="search-item border-bottom" 
                     v-for="item of list" 
                     :key="item.id"
+                    @click="handleCityClick(item.name)"
                 >
                     {{item.name}}
                 </li>
@@ -28,6 +29,7 @@ import { clearTimeout } from 'timers'; -->
 <script>
 import Bscroll from 'better-scroll'
 // 搜索框搜索部分
+import { mapMutations } from 'vuex'
 export default {
     name:'CitySearch',
     props: {
@@ -67,6 +69,13 @@ export default {
                 this.list = result
             },100)
         }
+    },
+    methods: {
+        handleCityClick(city){
+            this.changeCity(city)
+            this.$router.push("/")
+        },
+        ...mapMutations(['changeCity'])
     },
     mounted () {
         this.scroll = new Bscroll(this.$refs.search)

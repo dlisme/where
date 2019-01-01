@@ -11,6 +11,8 @@ import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
 // 轮播插件css
 import 'swiper/dist/css/swiper.css'
+// 使用vuex
+import store from './store'
 
 
 
@@ -22,6 +24,7 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 new Vue({
   el: "#app",
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
 
