@@ -46,8 +46,7 @@ export default {
   },
     methods: {
         handleLetterClick (e) {
-            this.$emit('change', e.target.innerText)
-            // console.log(e.target.innerText)
+            this.$emit('change', e.target.innerText.trim())
         },
         //右边字母表拖拽，左边跟着滚动
         handleTouchStart () {
