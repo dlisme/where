@@ -32,13 +32,12 @@ export default {
     },
     methods: {
         handleScroll () {
+            // console.log('scroll')
             const top = document.documentElement.scrollTop
             if (top > 60) {
-                const opacity = top / 140
-                // opacity = opacity > 1 ? 1 : opacity
-                this.opacityStyle = {
-                    opacity
-                }
+                let opacity = top / 140
+                opacity = opacity > 1 ? 1 : opacity
+                this.opacityStyle = { opacity }
                 // opacity = opacity > 1 ? 1
                 this.showAbs = false
             } else {
@@ -49,7 +48,10 @@ export default {
     },
     mounted () {
         window.addEventListener('scroll', this.handleScroll)
-    }
+    },
+    unmounted () {
+        window.removeEventListener('scroll', this.handleScroll)
+  }
 }
 </script>
 <style lang="stylus" scoped>
