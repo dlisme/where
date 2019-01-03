@@ -19,5 +19,9 @@ export default new VueRouter({
       path: '/detail/:id',
       name: 'Detail',
       component: Detail
-    }]
+    }],
+    // 拖动多个页面会互相影响,解决方法
+    scrollBehavior (to, from, savedPosition) {
+      return {x: 0, y: 0}
+    }
 })
