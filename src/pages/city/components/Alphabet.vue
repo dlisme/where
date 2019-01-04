@@ -4,12 +4,13 @@ import { clearTimeout } from 'timers'; -->
     <ul class="list">
             <!-- v-for="(item , key) of cities" 
             :key="key" -->
+            <!-- .prevent阻止默认行为 滑动手机整个页面不会上下动 -->
         <li 
             class="item" 
             v-for="item of letters" 
             :key="item"
             :ref="item"
-            @touchstart="handleTouchStart"
+            @touchstart.prevent="handleTouchStart"
             @touchmove="handleTouchMove"
             @touchend="handleTouchEnd"
             @click="handleLetterClick"

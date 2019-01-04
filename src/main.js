@@ -13,6 +13,8 @@ import './assets/styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 // 使用vuex
 import store from './store'
+// 防止某些机型出现白板，支持不了promise
+import 'babel-polyfill'
 
 
 
