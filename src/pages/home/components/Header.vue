@@ -26,7 +26,7 @@ export default {
     name: 'HomeHeader',
     computed: {
         ...mapState(['city'])  //vuex里面的数据映射到omputed计算属性里
-        // ...mapGetters(['doubleCity'])
+        // ...mapGetters(['doubleCity']) 对象展开运算符
     }
 }
 //1rem = html font-size = 50px
